@@ -3,7 +3,7 @@
 
 This project is my submission to Fannie Mae's challenge at the Technica 2022 hackathon.
 
-The link to my webapp is [here] (https://ayeshanabiha-homebuyer-approval-app-homebuyer-app-1xn7yg.streamlitapp.com/)
+The link to my webapp is [here](https://ayeshanabiha-homebuyer-approval-app-homebuyer-app-1xn7yg.streamlitapp.com/)
 
 For first-time homebuyers, the process can often be confusing and feel overwhelming. In this web app (powered by Streamlit), users are able to learn about the basics of homebuying, check if they currently qualify to buy a home (and what they can do to improve their chances), and also learn a little about data science by looking at my analysis of previous homebuyer data!
 
