@@ -114,7 +114,7 @@ with tab2:
     else:
         pmi = 0
     dti = get_dti_app(gross_monthly_income, debt_payments, pmi)
-    fedti = get_fedti(gross_monthly_income, debt_payments, pmi)
+    fedti = get_fedti(gross_monthly_income, monthly_mortgage_payment, pmi)
     decision, messages = is_buyer_approved_app(credit_score, dti, fedti, ltv)
 
     if decision == True:
@@ -157,7 +157,7 @@ with tab2:
 
             if msg == "LTV ratio is greater than 80%":
                 st.info("While this by itself is not reason to disqualify you, since your LTV ratio was greater than 80%, you are required to purchase Private Mortgage Insurance (which is 1% of the appraised value of the house). You may want to consider increasing your down payment amount.")
-
+st.cache()
 with tab3:
     st.header("Previous Data from Homebuyers")
     st.write("Using data provided by Fannie Mae for the Technica Hackathon Challenge, I evaluated if each buyer is qualified to purchase a home.")
@@ -250,10 +250,4 @@ with tab3:
     
     st.subheader("Part 5: Applying Machine Learning to Data")
     st.write("Since we now had labels for each row classifying whether a loan was accepted or denied, I decided to use this to train an ML classification model. I thought it would be interesting to compare the results of the model to the manual approach I took when labelling the rows. I decided to use a logistic regression model as the outcome we want to predict is binary (either approved or denied)")
-
-
-
-
-
-
-    
+    st.write("I first split my data for training (75% of data) and testing (25% of data). I then trained a Logistic Regression model through `sklearn` for up to 1000 iterations. Finally, I tested my model on the test data and found the model to have **92.8%** accuracy.")
